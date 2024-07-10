@@ -25,3 +25,5 @@ To run the code, the following steps should be followed:
 8) The variance and ISW-Lensing bias is computed by running /Variance/Variance.py
 
 IMPORTANT NOTE: All python scripts include a variable named 'PATH'. This should be set to the path of the project on the PC. The code will not work otherwise.
+
+The code was written with the help of Alba Kalaja's code ([https://github.com/albakalaja/CMB_fisher_bispectrum]) and Adri J. Duivenvoorden's code (https://github.com/AdriJD/cmb_sst_ksw).
