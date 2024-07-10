@@ -1,20 +1,11 @@
-# %%
 import numpy as np
-
 import pandas as pd
 
-from pathlib import Path
-import sys, platform, os
+# The comoving coordinate $r$ is sampled according to Table 1 of Liguori et al. PRD, 76, 105016 (2007) [https://arxiv.org/pdf/0708.3786]. $r$ is measured in Mpc.
 
-# %% [markdown]
-# First, we sample the comoving coordinate $r$ according to Table 1 of Liguori et al. PRD, 76, 105016 (2007) [https://arxiv.org/pdf/0708.3786]. $r$ is measured in Mpc.
-
-# %%
 # Sample r
 r_max = 14400
-
 r_array = np.array([r_max])
-
 r = r_max
 
 while r > 105:
@@ -39,11 +30,6 @@ while r > 105:
         r -= 105
         r_array = np.append(r_array, r)
 
-
-# %%
 # Writing to CSV
-
 r_array_dataframe = pd.DataFrame(r_array)
-r_array_dataframe.to_csv('r_Samples.csv')
-
-
+r_array_dataframe.to_csv('r_samples.csv')
